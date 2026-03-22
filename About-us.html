@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+        <title>Website using Bootstrap</title>
+
+        <style>
+            .w-50{
+                width : 100% !important;
+                height: 400px !important;
+            }
+            .carousel-caption {
+                color: white !important;
+            }
+            .h-50 > img {
+                height: 200px !important;
+                width: 100% !important;
+            }
+            .row {
+                margin-top: 30px !important;
+                margin-bottom: 20px !important;
+                max-width: 100% !important;
+                display: flex !important;
+                justify-self: center !important;
+            }
+            .card {
+                margin-top: 30px;
+            }
+            .container {
+                display: flex !important;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Gaming Store</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul
+                        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                        style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page"
+                                href="Index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="About-us.html">About
+                                us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary me-2"
+                            type="submit">Search</button>
+
+                        <button class="btn btn-outline-danger me-2"
+                            type="button" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Login</button>
+
+                        <button
+                            class="btn btn-outline-danger me-2"
+                            type="button" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropSignUp">Signup</button>
+
+                        <!-- login Modal -->
+                        <div class="modal fade" id="staticBackdrop"
+                            data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="staticBackdropLabel">Modal
+                                            title</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"
+                                                    class="form-label">Email
+                                                    address</label>
+                                                <input type="email"
+                                                    class="form-control"
+                                                    id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp"
+                                                    class="form-text">We'll
+                                                    never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputPassword1"
+                                                    class="form-label">Password</label>
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="exampleInputPassword1">
+                                            </div>
+
+                                            <button type="submit"
+                                                class="btn btn-primary">Login</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signup Modal -->
+                        <div class="modal fade" id="staticBackdropSignUp"
+                            data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="staticBackdropLabel">Modal
+                                            title</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputName1"
+                                                    class="form-label">Full
+                                                    Name</label>
+                                                <input type="text"
+                                                    class="form-control"
+                                                    id="exampleInputName1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputNumber1"
+                                                    class="form-label">Phone
+                                                    Number</label>
+                                                <input type="text"
+                                                    class="form-control"
+                                                    id="exampleInputNumber1">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"
+                                                    class="form-label">Email
+                                                    address</label>
+                                                <input type="email"
+                                                    class="form-control"
+                                                    id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp"
+                                                    class="form-text">We'll
+                                                    never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputPassword1"
+                                                    class="form-label">Password</label>
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="exampleInputPassword1">
+                                            </div>
+
+                                            <button type="submit"
+                                                class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Top Area -->
+        <div class="card">
+            <div class="card-body text-center">
+                <h2 class="card-title font-size-6">Know About Me</h2>
+                <p class="card-text">My name is Akhilesh Bhatt. I am a BIM
+                    student with a passion for technology and innovation. I am
+                    dedicated to learning and growing in the field of web
+                    development. I am learning Bootstrap at 21-Mar-2026 </p>
+            </div>
+        </div>
+
+        <!-- Card Section -->
+        <div
+            class="container flex-column justify-content-center text-center mt-5 border border-2 border-gray rounded">
+            <!-- first area -->
+            <div class="row featurette align-items-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Reason to built website</h2>
+                    <p class="lead">I have created this website to learn web
+                        development through Bootstrap framework. I am happy to
+                        share my knowledge and experience with others.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                        width="300" height="300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 300x300"
+                        preserveAspectRatio="xMidYMid slice"
+                        focusable="false"><title>Image</title><rect width="100%"
+                            height="100%" fill="#eee"></rect><text x="50%"
+                            y="50%"
+                            fill="#aaa" dy=".3em">300x300</text>
+                        <image
+                            href="Images/linus-mimietz-gvptKmonylk-unsplash.jpg"
+                            x="-10" y="0" width="550" height="300" /></svg>
+
+                </div>
+            </div>
+
+            <!-- second area -->
+            <div
+                class="row featurette justify-content-center align-items-center text-center">
+                <div class="col-md-5">
+                    <svg
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                        width="300" height="300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img" aria-label="Placeholder: 300x300"
+                        preserveAspectRatio="xMidYMid slice"
+                        focusable="false"><title>Image</title><rect width="100%"
+                            height="100%" fill="#eee"></rect><text x="50%"
+                            y="50%"
+                            fill="#aaa" dy=".3em">300x300</text>
+                        <image
+                            href="Images/tomasz-gawlowski-YDZPdqv3FcA-unsplash.jpg"
+                            x="-10" y="0" width="450" height="300" />
+                    </svg>
+
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Our Mission</h2>
+                    <p class="lead">Our mission is to provide high-quality web
+                        development solutions using the latest technologies and
+                        best practices.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer Details -->
+        <div class="container mt-5 justify-content-center text-center">
+            <div class="col-lg-4 my-2">
+                <svg class="bd-placeholder-img rounded-circle" width="240"
+                    height="240"
+                    xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: 140x140"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <defs>
+                        <clippath id="circleClip">
+                            <circle cx="120" cy="120" r="120" />
+                        </clippath>
+                    </defs>
+                    <image href="Images/My-Image.jpg" width="240" height="240"
+                        clip-path="url(#circleClip)"
+                        preserveAspectRatio="xMidYMid slice" />
+                </svg>
+
+                <h2>Akhilesh Bhatt</h2>
+                <p>Practicing bootstrap development.</p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer
+            class="container mt-5 justify-content-center text-center border border-2 border-gray rounded">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a
+                    href="#">Terms</a></p>
+        </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    </body>
+</html>

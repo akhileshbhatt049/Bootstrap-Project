@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+
+        <title>Website using Bootstrap</title>
+
+        <style>
+            .w-50{
+                width : 100% !important;
+                height: 400px !important;
+            }
+            .carousel-caption {
+                color: white !important;
+            }
+            .h-50 > img {
+                height: 200px !important;
+                width: 100% !important;
+            }
+            .row {
+                margin-top: 30px !important;
+                margin-bottom: 20px !important;
+                max-width: 100% !important;
+                display: flex !important;
+                justify-self: center !important;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light"
+            style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Gaming Store</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul
+                        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                        style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About-us.html">About
+                                us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary me-2"
+                            type="submit">Search</button>
+
+                        <button class="btn btn-outline-danger me-2"
+                            type="button" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Login</button>
+
+                        <button
+                            class="btn btn-outline-danger me-2"
+                            type="button" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropSignUp">Signup</button>
+
+                        <!-- login Modal -->
+                        <div class="modal fade" id="staticBackdrop"
+                            data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="staticBackdropLabel">Modal
+                                            title</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"
+                                                    class="form-label">Email
+                                                    address</label>
+                                                <input type="email"
+                                                    class="form-control"
+                                                    id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp"
+                                                    class="form-text">We'll
+                                                    never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputPassword1"
+                                                    class="form-label">Password</label>
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="exampleInputPassword1">
+                                            </div>
+
+                                            <button type="submit"
+                                                class="btn btn-primary">Login</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signup Modal -->
+                        <div class="modal fade" id="staticBackdropSignUp"
+                            data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title"
+                                            id="staticBackdropLabel">Modal
+                                            title</h5>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputName1"
+                                                    class="form-label">Full
+                                                    Name</label>
+                                                <input type="text"
+                                                    class="form-control"
+                                                    id="exampleInputName1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputNumber1"
+                                                    class="form-label">Phone
+                                                    Number</label>
+                                                <input type="text"
+                                                    class="form-control"
+                                                    id="exampleInputNumber1">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"
+                                                    class="form-label">Email
+                                                    address</label>
+                                                <input type="email"
+                                                    class="form-control"
+                                                    id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp"
+                                                    class="form-text">We'll
+                                                    never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleInputPassword1"
+                                                    class="form-label">Password</label>
+                                                <input type="password"
+                                                    class="form-control"
+                                                    id="exampleInputPassword1">
+                                            </div>
+
+                                            <button type="submit"
+                                                class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sliding Images -->
+        <div id="carouselExampleDark"
+            class="carousel carousel-dark slide carousel-fade"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="Images/fadoul-m-YH-FHGGcNIw-unsplash.jpg"
+                        class="d-block w-50" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Chair</h5>
+                        <p>Some representation of our products.</p>
+                        <button type="button"
+                            class="btn btn-primary">Gaming</button>
+                        <button type="button"
+                            class="btn btn-info">Esports</button>
+                        <button type="button"
+                            class="btn btn-success">Advancement</button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="Images/frankie-VghbBAYqUJ0-unsplash.jpg"
+                        class="d-block w-50" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mouse</h5>
+                        <p>Some representation of our products.</p>
+                        <button type="button"
+                            class="btn btn-primary">Gaming</button>
+                        <button type="button"
+                            class="btn btn-info">Esports</button>
+                        <button type="button"
+                            class="btn btn-success">Advancement</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/linus-mimietz-gvptKmonylk-unsplash.jpg"
+                        class="d-block w-50" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Monitor</h5>
+                        <p>Some representation of our products.</p>
+                        <button type="button"
+                            class="btn btn-primary">Gaming</button>
+                        <button type="button"
+                            class="btn btn-info">Esports</button>
+                        <button type="button"
+                            class="btn btn-success">Advancement</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg"
+                        class="d-block w-50" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Keyboard</h5>
+                        <p>Some representation of our products.</p>
+                        <button type="button"
+                            class="btn btn-primary">Gaming</button>
+                        <button type="button"
+                            class="btn btn-info">Esports</button>
+                        <button type="button"
+                            class="btn btn-success">Advancement</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/tomasz-gawlowski-YDZPdqv3FcA-unsplash.jpg"
+                        class="d-block w-50" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Headphone</h5>
+                        <p>Some representation of our products.</p>
+                        <button type="button"
+                            class="btn btn-primary">Gaming</button>
+                        <button type="button"
+                            class="btn btn-info">Esports</button>
+                        <button type="button"
+                            class="btn btn-success">Advancement</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Cards of Porducts -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/fadoul-m-YH-FHGGcNIw-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chair</h5>
+                        <p class="card-text">Built-in lumbar support, adjustable
+                            height, and maximum comfort.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/frankie-VghbBAYqUJ0-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mouse</h5>
+                        <p class="card-text">Adjustable DPI, lightweight design,
+                            and ultra-fast response time.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/linus-mimietz-gvptKmonylk-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitor</h5>
+                        <p class="card-text">High refresh rate, superior
+                            graphics, and ultra-smooth gameplay.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Keyboard</h5>
+                        <p class="card-text">Customizable RGB keys and
+                            ultra-responsive switches for peak performance.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/tomasz-gawlowski-YDZPdqv3FcA-unsplash.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Headphones</h5>
+                        <p class="card-text">Crystal-clear sound, noise
+                            cancellation, supreme comfort and peak
+                            performance.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-50">
+                    <img src="Images/Mic.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Microphone</h5>
+                        <p class="card-text">RGB lighting, often customizable,
+                            enhances gaming aesthetics, notes Videopro and
+                            Digitek.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins
+                            ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2"
+                        src="Images/Book.png" alt
+                        width="24" height="19">
+                    <small class="d-block mb-3 text-muted">&copy;
+                        2017–2021</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Cool stuff</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Random feature</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Team feature</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Stuff for developers</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Another one</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Resource</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Resource name</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Another resource</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Team</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Locations</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Privacy</a></li>
+                        <li class="mb-1"><a
+                                class="link-secondary text-decoration-none"
+                                href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    </body>
+</html>
